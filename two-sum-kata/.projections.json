@@ -1,0 +1,10 @@
+{
+	"src/*.py": {
+		"alternate": "tests/test_{}.py",
+		"type": "source"
+	},
+	"tests/test_*.py": {
+		"alternate": "src/{}.py",
+		"type": "test"
+	}
+}

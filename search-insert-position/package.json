@@ -1,0 +1,22 @@
+{
+  "name": "search-insert-position",
+  "version": "1.0.0",
+  "description": "A kata for practicing A+DS",
+  "main": "index.js",
+  "author": "clark-lindsay <clarklindsay96@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@babel/core": "^7.10.3",
+    "@babel/preset-typescript": "^7.10.1",
+    "@types/jest": "^26.0.0",
+    "@types/node": "^14.0.13",
+    "eslint": "^7.3.1",
+    "jest": "^26.1.0",
+    "jest-vim-reporter": "^0.0.1",
+    "prettier": "^2.0.5",
+    "ts-jest": "^26.1.1",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.5"
+  }
+}
