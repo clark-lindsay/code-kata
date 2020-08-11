@@ -10,4 +10,8 @@ describe('the plusOne function', () => {
 		expect(plusOne([3])).toEqual([4]);
 		expect(plusOne([8])).toEqual([9]);
 	});
+
+	it('returns [1, 0] when given [9]', () => {
+		expect(plusOne([9])).toEqual([1, 0]);
+	});
 });
