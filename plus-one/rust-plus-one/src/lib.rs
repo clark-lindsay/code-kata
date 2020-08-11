@@ -11,6 +11,7 @@ pub fn plus_one(int_as_vector: Vec<i32>) -> Vec<i32> {
     return result.into_bytes().into_iter().map( |b| b as i32 - 48 ).collect::<Vec<i32>>();
 }
 
+
 #[cfg(test)]
 mod plus_one_tests {
 use super::*;
@@ -22,7 +23,9 @@ use super::*;
     }
 
     #[test]
-    fn given_a_9() {
+    fn given_a_series_of_nines() {
         assert_eq!(plus_one(vec![9]), vec![1, 0], "given a [9], it returns [1, 0]");
+        assert_eq!(plus_one(vec![9, 9]), vec![1, 0, 0], "given [9, 9], it returns [1, 0, 0]");
+        assert_eq!(plus_one(vec![9, 9, 9]), vec![1, 0, 0, 0], "given [9, 9, 9], it returns [1, 0, 0, 0]");
     }
 }
