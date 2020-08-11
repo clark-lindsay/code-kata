@@ -11,13 +11,15 @@ describe('the plusOne function', () => {
 		expect(plusOne([8])).toEqual([9]);
 	});
 
-	it('returns [1, 0] when given [9]', () => {
-		expect(plusOne([9])).toEqual([1, 0]);
-	});
-
 	it('succeeds when a new digit needs to be added to the array', () => {
 		expect(plusOne([9])).toEqual([1, 0]);
 		expect(plusOne([9, 9])).toEqual([1, 0, 0]);
 		expect(plusOne([1, 9, 9, 9])).toEqual([2,0,0,0]);
+	});
+
+	it('succeeds with arbitrary integers', () => {
+		expect(plusOne([1, 2, 3])).toEqual([1, 2, 4]);
+		expect(plusOne([4, 3, 2, 1])).toEqual([4, 3, 2, 2]);
+		expect(plusOne([1, 7, 8, 9, 9])).toEqual([1, 7, 9, 0, 0]);
 	});
 });
