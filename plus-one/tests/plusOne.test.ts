@@ -14,4 +14,10 @@ describe('the plusOne function', () => {
 	it('returns [1, 0] when given [9]', () => {
 		expect(plusOne([9])).toEqual([1, 0]);
 	});
+
+	it('succeeds when a new digit needs to be added to the array', () => {
+		expect(plusOne([9])).toEqual([1, 0]);
+		expect(plusOne([9, 9])).toEqual([1, 0, 0]);
+		expect(plusOne([1, 9, 9, 9])).toEqual([2,0,0,0]);
+	});
 });
