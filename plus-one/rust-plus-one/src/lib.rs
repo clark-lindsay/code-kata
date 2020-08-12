@@ -26,4 +26,10 @@ mod plus_one_tests {
         assert_eq!(plus_one(vec![9, 9]), vec![1, 0, 0], "given [9, 9], it returns [1, 0, 0]");
         assert_eq!(plus_one(vec![9, 9, 9]), vec![1, 0, 0, 0], "given [9, 9, 9], it returns [1, 0, 0, 0]");
     }
+#[test]
+    fn given_an_arbritrary_int() {
+        assert_eq!(plus_one(vec![1, 2, 3]), vec![1, 2, 4]);
+        assert_eq!(plus_one(vec![4, 3, 2, 1]), vec![4, 3, 2, 2]);
+        assert_eq!(plus_one(vec![7, 8, 4, 9]), vec![7, 8, 5, 0]);
+    }
 }
