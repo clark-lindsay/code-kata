@@ -1,0 +1,1 @@
+/Users/clarklindsay/Documents/code/code-kata/plus-one/rust-plus-one/target/debug/librust_plus_one.rlib: /Users/clarklindsay/Documents/code/code-kata/plus-one/rust-plus-one/src/i32_vec_to_i32.rs /Users/clarklindsay/Documents/code/code-kata/plus-one/rust-plus-one/src/lib.rs

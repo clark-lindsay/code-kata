@@ -1,12 +1,9 @@
-use std::convert::TryInto;
+mod i32_vec_to_i32;
+
+use crate::i32_vec_to_i32::transform;
 
 pub fn plus_one(int_as_vector: Vec<i32>) -> Vec<i32> {
-    let mut power_of_ten: i32 = (int_as_vector.len() - 1).try_into().unwrap();
-    let mut given_value: i32 = int_as_vector.iter().fold(0i32, |sum, val| {
-        power_of_ten -= 1;
-        return sum + (val * i32::pow(10, (power_of_ten + 1) as u32));
-    });
-    given_value += 1;
+    let given_value: i32 = transform(int_as_vector) + 1;
     let result = format!("{}", given_value);
     return result.into_bytes().into_iter().map( |b| b as i32 - 48 ).collect::<Vec<i32>>();
 }
@@ -14,7 +11,8 @@ pub fn plus_one(int_as_vector: Vec<i32>) -> Vec<i32> {
 
 #[cfg(test)]
 mod plus_one_tests {
-use super::*;
+    use super::*;
+
     #[test]
     fn given_a_single_digit() {
         assert_eq!(plus_one(vec![0]), vec![1], "given [0], it returns [1]");
