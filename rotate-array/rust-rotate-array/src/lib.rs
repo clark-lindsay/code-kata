@@ -29,5 +29,8 @@ mod tests {
         assert_eq!(rotate_vector(vec![1, 2, 3], 2), vec![2, 3, 1]);
         assert_eq!(rotate_vector(vec![-1, 7, 105, 14, -32], 4), vec![7, 105, 14, -32, -1]);
         assert_eq!(rotate_vector(vec![4, 18, 37, -9], 5), vec![-9, 4, 18, 37]);
+
+        let many_ones: Vec<i32> = (0..999999).collect::<Vec<i32>>().iter().map(|_| 1).collect();
+        assert_eq!(rotate_vector(many_ones.clone(), 5), many_ones.clone());
     }
 }
