@@ -1,0 +1,1 @@
+/Users/clarklindsay/Documents/code/code-kata/rotate-array/rust-rotate-array/target/debug/librust_rotate_array.rlib: /Users/clarklindsay/Documents/code/code-kata/rotate-array/rust-rotate-array/src/lib.rs
