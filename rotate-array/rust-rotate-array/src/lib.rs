@@ -1,5 +1,9 @@
-fn rotate_vector(nums: Vec<i32>, rotationOffset: i32) -> Vec<i32> {
-    return nums;
+pub fn rotate_vector(nums: Vec<i32>, rotationOffset: usize) -> Vec<i32> {
+    let mut result = nums.clone();
+    nums.iter().enumerate().for_each(| (index, value) | {
+        result[(index + rotationOffset) % nums.len()] = *value;
+    });
+    return result;
 }
 
 #[cfg(test)]
@@ -16,5 +20,10 @@ mod tests {
         assert_eq!(rotate_vector(vec![1], 1), vec![1]);
         assert_eq!(rotate_vector(vec![1], 5), vec![1]);
         assert_eq!(rotate_vector(vec![1], 58), vec![1]);
+    }
+
+    #[test]
+    fn given_arbitrary_vectors() {
+        assert_eq!(rotate_vector(vec![1, 2, 3], 2), vec![2, 3, 1]);
     }
 }
