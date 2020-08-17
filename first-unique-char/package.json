@@ -1,0 +1,22 @@
+{
+  "name": "first-unique-char",
+  "version": "1.0.0",
+  "description": "Given a string, find the first character that appears only once in the string and return its index. If it does not exist, return -1.",
+  "main": "index.js",
+  "author": "clark-lindsay <clarklindsay96@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/preset-typescript": "^7.10.4",
+    "@types/jest": "^26.0.10",
+    "@types/node": "^14.6.0",
+    "eslint": "^7.7.0",
+    "jest": "^26.4.0",
+    "jest-vim-reporter": "^0.0.1",
+    "prettier": "^2.0.5",
+    "ts-jest": "^26.2.0",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7"
+  }
+}
