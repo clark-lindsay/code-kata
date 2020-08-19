@@ -5,9 +5,12 @@ use crate::i32_vec_to_i32::transform;
 pub fn plus_one(int_as_vector: Vec<i32>) -> Vec<i32> {
     let given_value: i32 = transform(int_as_vector) + 1;
     let result = format!("{}", given_value);
-    return result.into_bytes().into_iter().map( |b| b as i32 - 48 ).collect::<Vec<i32>>();
+    return result
+        .into_bytes()
+        .into_iter()
+        .map(|b| b as i32 - 48)
+        .collect::<Vec<i32>>();
 }
-
 
 #[cfg(test)]
 mod plus_one_tests {
@@ -22,9 +25,21 @@ mod plus_one_tests {
 
     #[test]
     fn given_a_series_of_nines() {
-        assert_eq!(plus_one(vec![9]), vec![1, 0], "given a [9], it returns [1, 0]");
-        assert_eq!(plus_one(vec![9, 9]), vec![1, 0, 0], "given [9, 9], it returns [1, 0, 0]");
-        assert_eq!(plus_one(vec![9, 9, 9]), vec![1, 0, 0, 0], "given [9, 9, 9], it returns [1, 0, 0, 0]");
+        assert_eq!(
+            plus_one(vec![9]),
+            vec![1, 0],
+            "given a [9], it returns [1, 0]"
+        );
+        assert_eq!(
+            plus_one(vec![9, 9]),
+            vec![1, 0, 0],
+            "given [9, 9], it returns [1, 0, 0]"
+        );
+        assert_eq!(
+            plus_one(vec![9, 9, 9]),
+            vec![1, 0, 0, 0],
+            "given [9, 9, 9], it returns [1, 0, 0, 0]"
+        );
     }
 
     #[test]
