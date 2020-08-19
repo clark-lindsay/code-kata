@@ -7,10 +7,10 @@ struct CharInfo {
 }
 
 pub fn first_unique_char(text: &str) -> Option<usize> {
-    let chars = get_char_info(text);
+    let char_to_info = get_char_info(text);
 
     let mut result: Option<usize> = None;
-    chars.iter().for_each(|(_, info)| {
+    char_to_info.iter().for_each(|(_, info)| {
         if info.count == 1 {
             match result {
                 None => result = Some(info.first_index),
@@ -92,6 +92,26 @@ mod tests {
         match result {
             Some(index) => {
                 assert_eq!(index, 1);
+            }
+            None => panic!(),
+        }
+    }
+
+    #[test]
+    fn given_long_strings() {
+        let result = first_unique_char("'Good Morning!' said Bilbo, and he meant it. The sun was shining, and the grass was very green. But Gandalf looked at him from under long bushy eyebrows that stuck out further than the brim of his shady hat.
+
+'What do you mean?' he said. 'Do you wish me a good morning, or mean that it is a good morning whether I want it or not; or that you feel good this morning; or that it is a morning to be good on?'
+
+'All of them at once,' said Bilbo. 'And a very fine morning for a pipe of tobacco out of doors, into the bargain.
+
+...
+
+'Good morning!' he said at last. 'We don't want any adventures here, thank you! You might try over The Hill or across The Water.' By this he meant that the conversation was at an end.
+'What a lot of things you do use Good morning for!' said Gandalf. 'Now you mean that you want to get rid of me, and that it won't be good till I move off.'");
+        match result {
+            Some(index) => {
+                assert_eq!(index, 6);
             }
             None => panic!(),
         }
